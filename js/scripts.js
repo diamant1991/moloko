@@ -22,13 +22,24 @@ $(document).ready(function() {
  });
 
    $('.phone').hover(function() {
-     $('header nav').animate({'margin-left': 0}, 'slow');
-     $('header nav li').animate({'margin-left': '3px', 'margin-right': '3px'}, 'slow')
+     $('header nav.main-nav').animate({'margin-left': 0}, 'slow');
+     $('header nav.main-nav li').animate({'margin-left': '3px', 'margin-right': '3px'}, 'slow')
+
+   }, function() {
+     $('header nav.main-nav').animate({'margin-left': '10%'}, 'slow')
+     $('header nav.main-nav li').animate({'margin-left': '20px', 'margin-right': '20px'}, 'slow')
+   });
+
+   $('.phone').hover(function() {
+     $('header.service nav').animate({'margin-left': 0}, 'slow');
+     $('nav.service li a').animate({'padding-right': '0'}, 'slow');
 
    }, function() {
      $('header nav').animate({'margin-left': '10%'}, 'slow')
-     $('header nav li').animate({'margin-left': '20px', 'margin-right': '20px'}, 'slow')
+    $('nav.service li a').animate({'padding-right': '20px'}, 'slow');
    });
+
+  
 
   
 

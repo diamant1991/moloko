@@ -5,8 +5,11 @@
   <meta charset="utf-8">
   <title>Молочная продукция</title>
   <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/range.js"></script>
   <script src="js/scripts.js"></script>
   <link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
   <script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
@@ -19,7 +22,7 @@
 <body>
   <header>
     <div class="container">
-      <nav>
+      <nav class="main-nav">
         <ul>
           <li><a class="hov_a" href="">о нас</a></li>
           <li><a class="hov_a" href="">наша продукция</a></li>
@@ -166,24 +169,26 @@
     </div>
   </section>
   <section class="four">
-    <div class="container">
-      <h2>наша продукция</h2>
-      <p>
-      <input type="range">
-      </p>
-      <ul>
-        <li><a href="">молоко</a></li>
-        <li><a href="">кефир</a></li>
-        <li><a href="">сметана</a></li>
-        <li><a href="">сливки</a></li>
-        <li><a href="">творог</a></li>
-        <li><a href="">масло</a></li>
-        <li><a href="">сыр</a></li>
-        <li><a href="">напитки</a></li>
-      </ul>
-      <div class="all">
-        <article>
-          <div class="img_big">
+      <div class="container">
+         <h2>наша продукция</h2>
+      </div>
+      <div class="scroll-pane ui-widget ui-widget-header ui-corner-all">
+         <div class="scroll-bar-wrap ui-widget-content ui-corner-bottom">
+            <div class="scroll-bar"></div>
+        </div>
+        <ul>
+           <li><a href="">молоко</a></li>
+           <li><a href="">кефир</a></li>
+           <li><a href="">сметана</a></li>
+           <li><a href="">сливки</a></li>
+           <li><a href="">творог</a></li>
+           <li><a href="">масло</a></li>
+           <li><a href="">сыр</a></li>
+           <li><a href="">напитки</a></li>
+         </ul>
+        <div class="scroll-content">
+          <div class="scroll-content-item ui-widget-header">
+            <div class="img_big">
             <div class="img">
               <img src="images/carusel_1.png" alt="">
             </div>
@@ -195,9 +200,9 @@
               <p>Мaсса: <span>200г</span></p>
             </div>
           </div>
-        </article>
-         <article>
-          <div class="img_big">
+          </div>
+          <div class="scroll-content-item ui-widget-header">
+             <div class="img_big">
             <div class="img">
               <img src="images/carusel_2.png" alt="">
             </div>
@@ -210,9 +215,9 @@
               <p>Мaсса: <span>200г</span></p>
             </div>
           </div>
-        </article>
-         <article>
-          <div class="img_big">
+          </div>
+          <div class="scroll-content-item ui-widget-header">
+             <div class="img_big">
             <div class="img">
               <img src="images/carusel_3.png" alt="">
             </div>
@@ -225,9 +230,9 @@
               <p>Мaсса: <span>500г</span></p>
             </div>
           </div>
-        </article>
-         <article>
-          <div class="img_big">
+          </div>
+          <div class="scroll-content-item ui-widget-header">
+              <div class="img_big">
             <div class="img">
               <img src="images/carusel_4.png" alt="">
             </div>
@@ -239,9 +244,125 @@
               <p>Мaсса: <span>500г</span></p>
             </div>
           </div>
-        </article>
+          </div>
+          <div class="scroll-content-item ui-widget-header">
+            <div class="img_big">
+            <div class="img">
+              <img src="images/carusel_1.png" alt="">
+            </div>
+          </div>
+          <div class="h2">
+            <h2>Йогуртный напиток</h2>
+            <div class="p">
+              <p>Жирность: <span>4,0%</span></p>
+              <p>Мaсса: <span>200г</span></p>
+            </div>
+          </div>
+          </div>
+          <div class="scroll-content-item ui-widget-header">
+             <div class="img_big">
+            <div class="img">
+              <img src="images/carusel_2.png" alt="">
+            </div>
+          </div>
+          <div class="h2">
+            <h2>йогуртный напиток
+            с ванилином</h2>
+            <div class="p">
+              <p>Жирность: <span>3,2%</span></p>
+              <p>Мaсса: <span>200г</span></p>
+            </div>
+          </div>
+          </div>
+          <div class="scroll-content-item ui-widget-header">
+             <div class="img_big">
+            <div class="img">
+              <img src="images/carusel_3.png" alt="">
+            </div>
+          </div>
+          <div class="h2">
+            <h2>АЦИДОфИЛЬНЫЙ
+            напиток</h2>
+            <div class="p">
+              <p>Жирность: <span>2,5%</span></p>
+              <p>Мaсса: <span>500г</span></p>
+            </div>
+          </div>
+          </div>
+          <div class="scroll-content-item ui-widget-header">
+              <div class="img_big">
+            <div class="img">
+              <img src="images/carusel_4.png" alt="">
+            </div>
+          </div>
+          <div class="h2">
+            <h2>Ряженка</h2>
+            <div class="p">
+              <p>Жирность: <span>4%</span></p>
+              <p>Мaсса: <span>500г</span></p>
+            </div>
+          </div>
+          </div>
+          <div class="scroll-content-item ui-widget-header">
+            <div class="img_big">
+            <div class="img">
+              <img src="images/carusel_1.png" alt="">
+            </div>
+          </div>
+          <div class="h2">
+            <h2>Йогуртный напиток</h2>
+            <div class="p">
+              <p>Жирность: <span>4,0%</span></p>
+              <p>Мaсса: <span>200г</span></p>
+            </div>
+          </div>
+          </div>
+          <div class="scroll-content-item ui-widget-header">
+             <div class="img_big">
+            <div class="img">
+              <img src="images/carusel_2.png" alt="">
+            </div>
+          </div>
+          <div class="h2">
+            <h2>йогуртный напиток
+            с ванилином</h2>
+            <div class="p">
+              <p>Жирность: <span>3,2%</span></p>
+              <p>Мaсса: <span>200г</span></p>
+            </div>
+          </div>
+          </div>
+          <div class="scroll-content-item ui-widget-header">
+             <div class="img_big">
+            <div class="img">
+              <img src="images/carusel_3.png" alt="">
+            </div>
+          </div>
+          <div class="h2">
+            <h2>АЦИДОфИЛЬНЫЙ
+            напиток</h2>
+            <div class="p">
+              <p>Жирность: <span>2,5%</span></p>
+              <p>Мaсса: <span>500г</span></p>
+            </div>
+          </div>
+          </div>
+          <div class="scroll-content-item ui-widget-header">
+              <div class="img_big">
+            <div class="img">
+              <img src="images/carusel_4.png" alt="">
+            </div>
+          </div>
+          <div class="h2">
+            <h2>Ряженка</h2>
+            <div class="p">
+              <p>Жирность: <span>4%</span></p>
+              <p>Мaсса: <span>500г</span></p>
+            </div>
+          </div>
+          </div>
+        </div>
       </div>
-    </div>
   </section>
   <section class="five">
     <div class="container">
