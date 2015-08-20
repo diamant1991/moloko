@@ -9,6 +9,11 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face{
+    font-family: 'MyriadProSemiBold';
+    src: url(../fonts/myriadpro-semibold-webfont.ttf);
+}
 .container {
     width:1280px;
     clear:both;
@@ -75,7 +80,7 @@ header a.phone{
 header a.trans_phone {
     height: 42px;
     width: 290px;
-    margin-right: 50px;
+    margin-right: 150px;
     font-size: 24px;
     font-family: sreda;
     background-image: url(../images/trans_phone.png);
@@ -90,7 +95,9 @@ header a.trans_phone {
     text-align: center;
     padding-top: 19px;
     background-repeat: no-repeat;
-    margin-top: -144px;
+    margin-top: -300px;
+    position: relative;
+    z-index: 2;
 }
 /* header a.trans_phone_180 {
     transform: rotateY(90deg);
@@ -104,10 +111,10 @@ header a.trans_phone {
         -o-transform: rotate(360deg);
         -moz-transform: rotate(360deg);
     }
-    .phone:hover + .trans_phone{
+     .main-phone:hover + .trans_phone{
         visibility: visible;
         opacity: 1;
-        margin-right: 130px;
+        margin-top: -145px;
     }
 header article {
     width: 50%;
@@ -499,9 +506,9 @@ body.about {
     height: 51px;
     display: block;
     transition: all .3s ease-in-out;
-    padding-top: 7px;
+    padding-top: 10px;
 }
-.four ul li a:active {
+.four ul li a.active {
     color:#000;
     background: url(../images/flag.png);
     background-repeat: no-repeat;
@@ -509,6 +516,7 @@ body.about {
     text-decoration: none;
     height: 51px;
 }
+
 .four ul li a:hover {
     color: #00C0FF;
     text-decoration: none;
@@ -1810,7 +1818,7 @@ aside nav.service_content li a {
 }
 .diploms {
     margin-top: -33px;
-    padding-bottom: 212px;
+    padding-bottom: 60px;
 
 }
 .diploms img:last-child {
@@ -2092,10 +2100,10 @@ section.conacts .right textarea {
     margin-left:         41px;
     height:         186px;
 }
-.pagination li a:hover {
+/* .pagination li a:hover {
     color:#fff;
     background: #6EC1EF;
-}
+} */
 .shad_img {
     display: block;
     vertical-align: top;
@@ -2109,17 +2117,28 @@ section.conacts .right textarea {
     box-sizing:         border-box;
     height:         409px;
     width:         301px;
+    -webkit-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+    
 }
 .film_roll_pager{
     display: none;
 }
 
 header.service a.trans_phone{
-   
-    margin-top: -75px;
+    margin-top: -200px;
+    margin-right: 220px;
 }
 
+.other-phone:hover + .trans_phone{
+        visibility: visible;
+        opacity: 1;
+        margin-top: -73px;
+    }
+
 .film_roll_child{
+    height: 600px;
     -webkit-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
@@ -2130,6 +2149,13 @@ header.service a.trans_phone{
     -o-filter: grayscale(100%);
     filter: grayscale(100%);
 }
+    .film_roll_child .dip-text{
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+               transition: all 0.5s ease-in-out;
+    }
 .film_roll_child.active{
     opacity: 1;
     -webkit-filter: grayscale(0%);
@@ -2138,14 +2164,23 @@ header.service a.trans_phone{
     -o-filter: grayscale(0%);
     filter: grayscale(0%);
 }
-    .film_roll_child.active:hover,
-    .opacity:hover,
-    .film_roll_child.active + div:hover{
+    .film_roll_child.active .dip-text,
+    .film_roll_child.active + div .dip-text,
+    .opacity .dip-text{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .film_roll_child.active .shad_img:hover,
+    .opacity .shad_img:hover,
+    .film_roll_child.active + div .shad_img:hover{
         transform: translate(0,-20px);
         -webkit-transform: translate(0,-20px);
         -o-transform: translate(0,-20px);
         -moz-transform: translate(0,-20px);
     }
+
+
 .film_roll_child.active + div{
     opacity: 1;
     -webkit-filter: grayscale(0%);
@@ -2168,7 +2203,7 @@ header.service a.trans_phone{
     width: 1280px !important;
     margin-top: -25px;
     z-index: 10;
-    top: 50%;
+    top: 38%;
     width: 100%;
     left: 50%;
     margin-left: -640px;
@@ -2193,17 +2228,13 @@ header.service a.trans_phone{
     padding-top: 30px !important;
 }
 
-
-.scroll-pane { overflow: auto; width: 100%; }
-.scroll-content { width: 3780px; float: left; }
-.scroll-content-item { width: 295px; float: left; text-align: center; padding-left: 10px;padding-right: 10px;}
-.scroll-bar-wrap { clear: left; padding: 0 4px 0 2px; margin: 0 -1px -1px -1px;}
-.scroll-bar-wrap .ui-slider { background: none; border:0; height: 2em; margin: 0 auto;  }
-.scroll-bar-wrap .ui-handle-helper-parent { position: relative; width: 462px; height: 6px; margin: 0 auto; margin-top: 25px;background: url(../images/liner.png)no-repeat; }
-.scroll-bar-wrap .ui-slider-handle { top:-8px; height: 24px; background: url(../images/range.png)no-repeat;margin-left: -2.5em; border:0 !important;outline: 0 !important }
-.scroll-bar-wrap .ui-slider-handle .ui-icon { margin: -8px auto 0; position: relative; top: 50%; }
-
-.scroll-bar-wrap .ui-slider-handle:hover,
-.scroll-bar-wrap .ui-slider-handle:active{
-    background: url(../images/range-h.png)no-repeat;
+.dip-text{
+    padding-top: 30px;
+    width: 301px;
+    text-align: center;
+    font-family: 'MyriadProSemiBold';
+    color: #343434;
+    font-size: 17px;
+    line-height: 1.4;
 }
+

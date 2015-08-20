@@ -13,6 +13,24 @@ $(function() {
         } else {
           scrollContent.css( "margin-left", 0 );
         }
+          function checksection(){
+            $('.scroll-content-item').each(function(){
+              var $this = $(this),
+                  leftEdge = $this.offset().left,
+                  rightEdge = leftEdge - $this.width(),
+                  wScroll = scrollContent.offset().left;
+
+              if(leftEdge < wScroll && rightEdge > wScroll){
+                  var currenId = $(this).data('section');
+                      console.log(currenId)
+              }
+
+            })
+          }
+          checksection()
+
+       
+
       }
     });
  
@@ -69,3 +87,9 @@ $(function() {
     //init scrollbar size
     setTimeout( sizeScrollbar, 10 );//safari wants a timeout
   });
+
+
+$(document).ready(function() {
+
+  
+});
