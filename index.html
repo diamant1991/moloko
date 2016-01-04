@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href='js/carousel/style.css'>
   <link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+  <link rel="stylesheet" href="js/carousel/jquery.bxslider.css">
 </head>
 <body>
   <header>
@@ -40,6 +41,34 @@
       <img src="images/click.png" alt=""></a>
     </div>
   </header>
+
+  <section class="main-carousel">
+    <div class="container">
+      <ul class="bxslider">
+        <li>
+          <div class="main-slider-item">
+            <div class="main-slider-desc">
+              <h3>Никольское Здоровье поздравляет Всех с наступающим Новым Годом и дарит праздничные скидки!</h3>
+              <p>До 31го декабря 2015 года в торговых точках Красноярска любой из вас может приобрести продукцию «Никольское Здоровье» с хорошей скидкой! Подробности смотрите внутри новости/</p>
+              <a href="#" class="more">Подробнее</a>
+            </div>
+            <img src="images/main-slide.png" height="450" width="1098" alt="">
+          </div>
+        </li>
+        <li>
+          <div class="main-slider-item">
+            <img src="images/main-slide.png" height="450" width="1098" alt="">
+          </div>
+        </li>
+        <li>
+          <div class="main-slider-item">
+            <img src="images/main-slide.png" height="450" width="1098" alt="">
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- carousel -->
   <section class="one">
     <div class="container" 
          id="click_scroll">
@@ -74,6 +103,8 @@
       </article>
     </div>
   </section>
+
+  
   <section class="two">
   <div class="back"></div>
     <div class="container">
@@ -562,6 +593,12 @@
     });
 </script>
 <script type="text/javascript" src="js/carousel/jquery.bxslider.min.js"></script>
+<script>
+  $('.bxslider').bxSlider({
+    pager: false,
+    mode: 'fade'
+  });
+</script>
 <script type="text/javascript" src="js/carousel/jquery.scrollbox.js"></script>
 <script type="text/javascript" src="js/carousel/jquery.plugin.min.js"></script>
 <script type="text/javascript" src="js/carousel/plugins.js"></script>
