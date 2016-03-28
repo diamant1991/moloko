@@ -484,10 +484,6 @@ header a.click {
     width: 954px;
     margin: 38px auto;
 }
-.four.about ul {
-    width: 791px;
-
-}
 body.about {
     background-image: url(../images/back_about.png);
     background-repeat: no-repeat;
@@ -2275,4 +2271,113 @@ header.service a.trans_phone{
 }
 .main-carousel{
   margin-top: 50px;
+}
+.video__item{
+    float: left;
+    width: 33.3%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 95px;
+    margin-bottom: 50px;
+}
+.video__item:nth-child(3n+1){
+    clear: both;
+}
+.video-wrapp:after{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+}
+.video-wrapp{
+    padding: 0 80px;
+    margin-left: -95px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+}
+.video__block{
+    position: relative;
+    top: -10px;
+    left: -10px;
+    width: 100%;
+    height: 225px;
+}
+.play-icon{
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    width: 70px;
+    height: 70px;
+    margin-left: -35px;
+    margin-top: -35px;
+    text-align: center;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.8);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 5px;
+}
+.table-block{
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.block-vertical{
+    display: table-cell;
+    vertical-align: middle;
+}
+.video__img{
+    height: 225px;
+    position: relative;
+    border: 5px solid #007bbf;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.video__desc{
+    text-align: center;
+}
+.video__text{
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+.video__text a{
+    color: #2c2c2c;
+    text-decoration: underline;
+    font-family: 'myriadpro';
+}
+.video__time{
+   font-family: 'myriadpro'; 
+   font-size: 14px;
+   color: #7e7e7e;
+   position: relative;
+   display: inline-block;
+   padding-left: 22px;
+}
+.video__time:before{
+    content: "";
+    position: absolute;
+    z-index: 2;
+    background: url(../images/time-icon.png)no-repeat;
+    width: 17px;
+    height: 17px;
+    left: 0;
+    top: -2px;
+}
+.video__content.active .video__img{
+    border-color: #4abcfc;
+}
+.video__content.active .play-icon{
+    background: #4abcfc;
+}
+.video__content.active .video__text a{
+    color: #0899ea;
+    text-decoration: none;
 }
