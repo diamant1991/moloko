@@ -21,10 +21,8 @@
 }
 header {
     background-color:#fff;
-
     background-repeat: no-repeat;;
     background-image:url(../images/back_1.png);;
-
     padding-bottom: 138px;
     background-position-x: 51%;
     background-position-y: 101%;;
@@ -2347,12 +2345,12 @@ header.service a.trans_phone{
 .video__text{
     font-size: 17px;
     margin-bottom: 15px;
-}
-.video__text a{
     color: #2c2c2c;
     text-decoration: underline;
     font-family: 'myriadpro';
+    line-height: 1.2;
 }
+
 .video__time{
    font-family: 'myriadpro'; 
    font-size: 14px;
@@ -2371,13 +2369,12 @@ header.service a.trans_phone{
     left: 0;
     top: -2px;
 }
-.video__content.active .video__img{
+.video__item a:hover .video__img{
     border-color: #4abcfc;
 }
-.video__content.active .play-icon{
+.video__item a:hover .play-icon{
     background: #4abcfc;
 }
-.video__content.active .video__text a{
-    color: #0899ea;
-    text-decoration: none;
+.video__item a:hover .video__text{
+    color: #4abcfc;
 }
